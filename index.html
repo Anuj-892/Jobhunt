@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jobhunt</title>
+</head>
+<body>
+    <header class="header">
+       <div class="container">
+        <h1 class="logo"><a href="#">jobhunt</a></h1>
+
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">about</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">jobs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">services</a></li>
+            </ul>
+
+            <a href="#" class="btn">Log In/Sign up</a>
+        </nav>
+
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div><!--  container ends here -->
+    </header>
+
+    <main>
+        <article class="hero">
+          <div class="overlay">
+            <div class="container">
+                <div class="info">
+                    <h2 class="title">Find The Job That Fits Your Life</h2>
+                    <p class="text">Each month, more than 7 million jobseekers turn to website in their search for work, making over
+                        160,000 applications every day.</p>
+
+                    <div class="filter">
+                        <!-- <input type="text" class="category" placeholder="Please give full names of categories." >-->
+                        <select class="category" placeholder="category">
+                            <option>Select Category</option>
+                            <option>software-dev</option>
+                            <option>hr</option>
+                            <option>customer-support</option>
+                            <option>design</option>
+                            <option>marketing</option>
+                            <option>sales</option>
+                            <option>product</option>
+                            <option>business</option>
+                            <option>data</option>
+                            <option>devops</option>
+                            <option>finance-legal</option>
+                            <option>qa</option>
+                            <option>teaching</option>
+                            <option>writing</option>
+                            <option>medical-health</option>
+                            <option>all-others</option>
+                        </select>
+                        <a href="#" class="btn submit">Search</a>
+                    </div>
+
+                    <p class="text"><strong>Trending Keywords:</strong> Design, Software Developer, Customer Support, Marketting, Sales, Product etc.</p></div>
+                </div>
+            </div>               
+          </div>
+        </article>
+
+        <article class="listings">
+            <div class="container">
+                <h2 class="title">Featured Listings</h2>
+
+                <!-- Job listings div -->
+                <div class="job-listings"></div>
+
+                <!-- Modal for job description -->
+                <div class="modal">
+                    <div class="container">
+                        <p class="close">&#10005</p>
+                         <h2 class="modal-name"></h2>
+                         <p class="modal-info"></p>
+
+                         <p class="modal-description"></p>
+                         <a href="#" class="btn">Apply Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="info">
+                <h2 class="title">Jobhunt</h2>
+                <div class="social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest"></i>
+                </div>
+                <h3 class="title">Subscribe Newsletter</h3>
+                <p class="text">Subscribe to Jobhunt newsletter to get the latest jobs posted.</p>
+                <div class="form">
+                    <input type="email">
+                    <a href="#" class="btn"><i class="fas fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+:root {
+  --bg-primary: #2a2a79e9;
+  --text-color: #dad4d4;
+  --modal-bg: rgb(46, 44, 44);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+a.btn {
+  font-weight: 600;
+  padding: 0.5em 2em;
+  border-radius: 20px;
+  margin-top: 1em;
+  border: 1px solid white;
+}
+
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.text {
+  color: var(--text-color);
+  margin-bottom: 0.7em;
+}
+
+header {
+  background-color: transparent;
+  z-index: 900;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .logo a {
+  color: white;
+  text-transform: uppercase;
+}
+
+header .container nav {
+  margin: 0 2em;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container nav .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .container nav .nav-list .nav-item {
+  margin-left: 1.5em;
+}
+
+header .container nav .nav-list .nav-item .nav-link {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  padding: 1em;
+  font-size: 0.93rem;
+  color: var(--text-color);
+}
+
+header .container nav .btn {
+  margin: 0px;
+}
+
+header .container .hamburger-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  display: none;
+}
+
+header .container .hamburger-menu div {
+  height: 2px;
+  width: 35px;
+  background: white;
+  margin: 0.4em 0;
+}
+
+@media (max-width: 990px) {
+  header {
+    padding: 1em 0;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container .hamburger-menu {
+    display: block;
+  }
+}
+
+.hero {
+  background: url("../images/background-3.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+.hero .overlay {
+  height: 100%;
+  background-color: var(--bg-primary);
+}
+
+.hero .overlay .container {
+  height: 100%;
+}
+
+.hero .overlay .container .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hero .overlay .container .info .title {
+  line-height: 1.2;
+  font-size: 3rem;
+}
+
+.hero .overlay .container .info .text {
+  font-size: 1.2rem;
+}
+
+.hero .overlay .container .info .filter {
+  width: 100%;
+  margin: 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay .container .info .filter select {
+  padding: 1.3em;
+  width: 50%;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  color: black;
+}
+
+.hero .overlay .container .info .filter .btn {
+  margin-top: 0;
+  padding: 1.5em 5em;
+  border-radius: 5px;
+  margin-left: 1em;
+}
+
+@media (max-width: 550px) {
+  header .container .logo a {
+    font-size: 1.7rem;
+  }
+  .hero .overlay .container .info .title {
+    font-size: 10vw;
+  }
+  .hero .overlay .container .info .filter {
+    margin: 1em 0;
+    text-align: center;
+    flex-direction: column;
+  }
+  .hero .overlay .container .info .filter select {
+    width: 100%;
+  }
+  .hero .overlay .container .info .filter .btn {
+    margin-top: 1em;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.listings {
+  margin: 4em 0;
+  min-height: 100vh;
+}
+
+.listings .container .title {
+  font-size: 2.2rem;
+  color: var(--bg-primary);
+}
+
+.listings .container .job-listings .listing {
+  border: 1px solid black;
+  padding: 1em;
+  position: relative;
+}
+
+.listings .container .job-listings .listing .info,
+.listings .container .job-listings .listing .location,
+.listings .container .job-listings .listing .type {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.listings .container .job-listings .listing .name {
+  color: var(--bg-primary);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.listings .container .job-listings .listing .btn {
+  cursor: pointer;
+  background-color: var(--bg-primary);
+}
+
+.listings .container .job-listings .listing .verify {
+  position: absolute;
+  bottom: 30px;
+  right: 2px;
+  color: green;
+}
+
+.listings .container .modal {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--modal-bg);
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.listings .container .modal .container {
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  padding: 1em 2em;
+  position: relative;
+}
+
+.listings .container .modal .container .modal-name,
+.listings .container .modal .container .modal-info,
+.listings .container .modal .container .modal-description {
+  color: black;
+}
+
+.listings .container .modal .container .modal-name {
+  color: var(--bg-primary);
+  text-transform: uppercase;
+}
+
+.listings .container .modal .container .modal-info {
+  font-size: 1.1rem;
+  margin: 1em 0;
+}
+
+.listings .container .modal .container .btn {
+  background-color: var(--bg-primary);
+}
+
+.listings .container .modal .container .close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media (max-width: 550px) {
+  .listings .container .job-listings .listing .info,
+  .listings .container .job-listings .listing .location,
+  .listings .container .job-listings .listing .type {
+    font-size: 1.2rem;
+  }
+  .listings .container .job-listings .listing .name {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  background-color: var(--bg-primary);
+}
+
+footer .container {
+  padding: 1em 0;
+  text-align: center;
+}
+
+footer .container .title {
+  text-transform: uppercase;
+}
+
+footer .container h2.title {
+  font-size: 1.8rem;
+}
+
+footer .container .social {
+  margin: 1em 0;
+}
+
+footer .container .social i {
+  cursor: pointer;
+  margin: 0 0.2em;
+  border-radius: 50%;
+  padding: 0.3em;
+  font-size: 1.1rem;
+  background-color: var(--text-color);
+}
+
+footer .container .form input {
+  padding: 0.7em;
+  border-radius: 30px;
+  width: 300px;
+}
+
+@media (max-width: 550px) {
+  footer .container .form input {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
